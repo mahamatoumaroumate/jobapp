@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: #14b8a6;
+  --primary-hover: #115e59;
+  --input-color: #f0fdfa;
+  --primary-gray: #64748b;
+}
+body {
+  background: #f1f5f9;
+}
+.loading {
+  width: 7rem;
+  height: 7rem;
+  border: 4px solid var(--primary-color);
+  border-radius: 50%;
+  margin: 5rem auto;
+  border-top-color: var(--primary-gray);
+  animation: myanimation 0.2s linear infinite;
+}
