@@ -17,6 +17,7 @@ const AddJob = () => {
   const dispatch = useDispatch()
   const {
     position,
+    isLoading,
     company,
     jobLocation,
     jobTypeOptions,
@@ -112,8 +113,12 @@ const AddJob = () => {
             >
               Clear
             </button>
-            <button className='btn btn-submit' type='submit'>
-              Submit
+            <button
+              className='btn btn-submit'
+              type='submit'
+              disabled={isLoading}
+            >
+              {isLoading ? 'Submit...' : 'Submit'}
             </button>
           </div>
         </Form>

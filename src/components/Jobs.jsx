@@ -2,7 +2,9 @@ import { FaCalendarAlt, FaLocationArrow, FaSuitcase } from 'react-icons/fa'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
 import { deleteJob, handleChange, setEditJob } from '../features/job/jobSlice'
+import { useDispatch } from 'react-redux'
 const Jobs = ({ job }) => {
+  const dispatch = useDispatch()
   const date = moment(job.createdAt).format('MMM Do , YY')
   return (
     <div className='job' key={job._id}>

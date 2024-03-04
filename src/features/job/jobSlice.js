@@ -51,7 +51,6 @@ const jobSlice = createSlice({
       .addCase(deleteJob.fulfilled, (state) => {
         state.isLoading = false
         toast.success('successfully deleted')
-        return { ...initialState }
       })
       .addCase(deleteJob.rejected, (state, { payload }) => {
         state.isLoading = false
