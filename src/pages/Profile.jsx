@@ -16,6 +16,11 @@ const Profile = () => {
   }
   const [newValues, setNewValues] = useState(Values)
   const handleChange = (e) => {
+    setNewValues({ ...newValues, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
     if (
       !newValues.email ||
       !newValues.lastName ||
@@ -25,10 +30,6 @@ const Profile = () => {
       toast.error('please fill all the fields')
       return
     }
-    setNewValues({ ...newValues, [e.target.name]: e.target.value })
-  }
-  const handleSubmit = (e) => {
-    e.preventDefault()
     dispatch(updateUser(newValues))
   }
   return (
